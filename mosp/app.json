@@ -1,0 +1,60 @@
+{
+  "expo": {
+    "name": "mosp",
+    "slug": "mosp",
+    "privacy": "public",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "android": {
+      "package": "de.domi2803.mosp",
+      "icon": "./assets/newIcons/logoWithBackground.png",
+      "adaptiveIcon": {
+        "backgroundColor": "#ffffff",
+        "foregroundImage": "./assets/adaptiveIcon.png"
+      },
+      "googleServicesFile": "./google-services.json",
+      "permissions": [],
+      "versionCode": 10,
+      "useNextNotificationsApi": true
+    },
+    "version": "1.4",
+    "notification": {
+      "icon": "./assets/notificationIcon96x96.png",
+      "color": "#ffffff",
+      "androidMode": "default",
+      "iosDisplayInForeground": true
+    },
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#FFFFFF"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "bundleIdentifier": "de.domi2803.mosp",
+      "supportsTablet": true,
+      "icon": "./assets/iconNoTrans.png",
+      "googleServicesFile": "./GoogleService-info.plist",
+      "buildNumber": "1.4"
+    },
+    "web":{
+      "config":{
+        "firebase": {
+          "apiKey": "AIzaSyA8jS-2EuaJ9H96YAFuuUrTDBnmfpypwxk",
+          "measurementId": "G-H7Y0485EJW",
+          "appId": "1:104787847560:web:5d138e7a5782009959f23d",
+          "storageBucket": "mosp-dcd1c.appspot.com",
+          "projectId": "mosp-dcd1c"
+        }
+      }
+    }
+  }
+}
