@@ -1,5 +1,5 @@
 ## mosp (MObile Substitute Plan) app
-This is the client app source code for a substitute plan application for and with my middle school.
+This is the client app source code for a substitute plan application I developed for and with my middle school.
 
 <img width=200 src="mosp/screenshots/ios/Simulator Screen Shot - iPhone 11 Pro - 2020-09-15 at 12.06.21.png" />
 <img width=200 src="mosp/screenshots/ios/Simulator Screen Shot - iPhone 11 Pro - 2020-09-15 at 12.06.12.png" />
