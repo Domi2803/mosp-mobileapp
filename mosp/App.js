@@ -90,29 +90,25 @@ const AuthFlowNavigator = createAnimatedSwitchNavigator({
 
 
 async function registerPush(){
-    
-    const { status: existingStatus } = await Permissions.getAsync(
-      Permissions.NOTIFICATIONS
-    );
+    console.log("trying to register push")
+    const { status: existingStatus } = await Notifications.getPermissionsAsync();
     let finalStatus = existingStatus;
-
-    // only ask if permissions have not already been determined, because
-    // iOS won't necessarily prompt the user a second time.
+    console.log("Status: ", existingStatus);
     if (existingStatus !== 'granted') {
-      // Android remote notification permissions are granted during the app
-      // install, so this will only ask on iOS
-      const { status } = await Permissions.askAsync(Permissions.NOTIFICATIONS);
+      const { status } = await Notifications.requestPermissionsAsync();
       finalStatus = status;
     }
-        // Stop here if the user did not grant permissions
+    console.log("Status: ", finalStatus);
     if (finalStatus !== 'granted') {
+      alert('Failed to get push token for push notification!');
+      console.log("Failed to get push token for push notification!");
       return;
     }
-
-    // Get the token that uniquely identifies this device
-    const pushToken = (await Notifications.getExpoPushTokenAsync()).data;
-    console.log("Got push token", pushToken);
-    AsyncStorage.setItem("@pushToken", pushToken);
+    console.log("getting token")
+    let token = (await Notifications.getExpoPushTokenAsync({experienceId: "@domi2803/mosp"})).data;
+    console.log("Token: ", token);
+    AsyncStorage.setItem("@pushToken", token);
+    console.log(token);
 
     if (Platform.OS === 'android') {
         Notifications.setNotificationChannelAsync('plan',
@@ -159,7 +155,6 @@ export default class App extends Component {
         registerPush();
         initRegister();
 
-        Analytics.setDebugModeEnabled(false);
         var firebaseConfig = {
             apiKey: "AIzaSyA8jS-2EuaJ9H96YAFuuUrTDBnmfpypwxk",
             authDomain: "mosp-dcd1c.firebaseapp.com",

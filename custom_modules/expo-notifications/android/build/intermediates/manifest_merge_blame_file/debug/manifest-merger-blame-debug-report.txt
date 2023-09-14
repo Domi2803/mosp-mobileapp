@@ -1,0 +1,65 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="expo.modules.notifications" >
+4
+5    <uses-sdk
+6        android:minSdkVersion="21"
+6-->C:\dev\repos\mosp-mobileapp\mosp\node_modules\expo-notifications\android\src\main\AndroidManifest.xml
+7        android:targetSdkVersion="33" />
+7-->C:\dev\repos\mosp-mobileapp\mosp\node_modules\expo-notifications\android\src\main\AndroidManifest.xml
+8
+9    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+9-->C:\dev\repos\mosp-mobileapp\mosp\node_modules\expo-notifications\android\src\main\AndroidManifest.xml:4:3-79
+9-->C:\dev\repos\mosp-mobileapp\mosp\node_modules\expo-notifications\android\src\main\AndroidManifest.xml:4:20-76
+10
+11    <application>
+11-->C:\dev\repos\mosp-mobileapp\mosp\node_modules\expo-notifications\android\src\main\AndroidManifest.xml:6:3-30:17
+12        <service
+12-->C:\dev\repos\mosp-mobileapp\mosp\node_modules\expo-notifications\android\src\main\AndroidManifest.xml:7:5-13:15
+13            android:name="expo.modules.notifications.service.ExpoFirebaseMessagingService"
+13-->C:\dev\repos\mosp-mobileapp\mosp\node_modules\expo-notifications\android\src\main\AndroidManifest.xml:8:7-59
+14            android:exported="false" >
+14-->C:\dev\repos\mosp-mobileapp\mosp\node_modules\expo-notifications\android\src\main\AndroidManifest.xml:9:7-31
+15            <intent-filter android:priority="-1" >
+15-->C:\dev\repos\mosp-mobileapp\mosp\node_modules\expo-notifications\android\src\main\AndroidManifest.xml:10:7-12:23
+15-->C:\dev\repos\mosp-mobileapp\mosp\node_modules\expo-notifications\android\src\main\AndroidManifest.xml:10:22-43
+16                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+16-->C:\dev\repos\mosp-mobileapp\mosp\node_modules\expo-notifications\android\src\main\AndroidManifest.xml:11:9-70
+16-->C:\dev\repos\mosp-mobileapp\mosp\node_modules\expo-notifications\android\src\main\AndroidManifest.xml:11:17-67
+17            </intent-filter>
+18        </service>
+19
+20        <receiver
+20-->C:\dev\repos\mosp-mobileapp\mosp\node_modules\expo-notifications\android\src\main\AndroidManifest.xml:15:5-29:16
+21            android:name="expo.modules.notifications.service.NotificationsService"
+21-->C:\dev\repos\mosp-mobileapp\mosp\node_modules\expo-notifications\android\src\main\AndroidManifest.xml:16:7-51
+22            android:enabled="true"
+22-->C:\dev\repos\mosp-mobileapp\mosp\node_modules\expo-notifications\android\src\main\AndroidManifest.xml:17:7-29
+23            android:exported="false" >
+23-->C:\dev\repos\mosp-mobileapp\mosp\node_modules\expo-notifications\android\src\main\AndroidManifest.xml:18:7-31
+24            <intent-filter android:priority="-1" >
+24-->C:\dev\repos\mosp-mobileapp\mosp\node_modules\expo-notifications\android\src\main\AndroidManifest.xml:19:7-28:23
+24-->C:\dev\repos\mosp-mobileapp\mosp\node_modules\expo-notifications\android\src\main\AndroidManifest.xml:19:22-43
+25                <action android:name="expo.modules.notifications.NOTIFICATION_EVENT" />
+25-->C:\dev\repos\mosp-mobileapp\mosp\node_modules\expo-notifications\android\src\main\AndroidManifest.xml:20:9-80
+25-->C:\dev\repos\mosp-mobileapp\mosp\node_modules\expo-notifications\android\src\main\AndroidManifest.xml:20:17-77
+26                <action android:name="android.intent.action.BOOT_COMPLETED" />
+26-->C:\dev\repos\mosp-mobileapp\mosp\node_modules\expo-notifications\android\src\main\AndroidManifest.xml:22:9-71
+26-->C:\dev\repos\mosp-mobileapp\mosp\node_modules\expo-notifications\android\src\main\AndroidManifest.xml:22:17-68
+27                <action android:name="android.intent.action.REBOOT" />
+27-->C:\dev\repos\mosp-mobileapp\mosp\node_modules\expo-notifications\android\src\main\AndroidManifest.xml:23:9-63
+27-->C:\dev\repos\mosp-mobileapp\mosp\node_modules\expo-notifications\android\src\main\AndroidManifest.xml:23:17-60
+28                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+28-->C:\dev\repos\mosp-mobileapp\mosp\node_modules\expo-notifications\android\src\main\AndroidManifest.xml:24:9-74
+28-->C:\dev\repos\mosp-mobileapp\mosp\node_modules\expo-notifications\android\src\main\AndroidManifest.xml:24:17-71
+29                <action android:name="com.htc.intent.action.QUICKBOOT_POWERON" />
+29-->C:\dev\repos\mosp-mobileapp\mosp\node_modules\expo-notifications\android\src\main\AndroidManifest.xml:25:9-74
+29-->C:\dev\repos\mosp-mobileapp\mosp\node_modules\expo-notifications\android\src\main\AndroidManifest.xml:25:17-71
+30                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+30-->C:\dev\repos\mosp-mobileapp\mosp\node_modules\expo-notifications\android\src\main\AndroidManifest.xml:27:9-76
+30-->C:\dev\repos\mosp-mobileapp\mosp\node_modules\expo-notifications\android\src\main\AndroidManifest.xml:27:17-73
+31            </intent-filter>
+32        </receiver>
+33    </application>
+34
+35</manifest>

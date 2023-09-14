@@ -25,7 +25,7 @@ export default class MyCourseItem extends Component {
     render() {
         return (
             <View style={styles.itemBase}>
-                <TextInput editable={false} style={styles.courseName} value={this.state.courseName} spellCheck={false} autoCapitalize={false} autoCorrect={false}  onChangeText={this.onChange} onEndEditing={this.updateList} />
+                <TextInput editable={false} style={styles.courseName} value={this.state.courseName} spellCheck={false} autoCorrect={false}  onChangeText={this.onChange} onEndEditing={this.updateList} />
                 <TouchableOpacity style={styles.delete}
                     onPress={() => this.props.deleteCallback(this.props.courseName)}>
                     <Ionicons name={"ios-close-circle"} size={28} style={styles.delete} />

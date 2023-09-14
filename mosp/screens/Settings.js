@@ -143,9 +143,8 @@ export default class Settings extends Component {
                         </Card>): null}
                         
                         <View style={{paddingLeft: 50, paddingRight: 50, paddingTop: 25}}><Button title="DEBUG" onPress={()=>this.onDebug()}/></View>
-                        <View style={{paddingLeft: 50, paddingRight: 50, paddingTop: 25}}><Button title="FORCE UPDATE" onPress={()=>this.checkUpdates()}/></View>
                         
-                        <Text style={{textAlign: "center", paddingTop: 10, color: "#888888"}}>{"\n(c) 2020 DTF IGS Hamm/Sieg\nDominik Vierbuchen\nStephan Stoffelen"}</Text>
+                        <Text style={{textAlign: "center", paddingTop: 10, color: "#888888"}}>{"\n(c) 2020-2023 DTF IGS Hamm/Sieg\nDominik Vierbuchen\nStephan Stoffelen"}</Text>
                         
                         <View style={{height: 150}}></View>
                     </View>
