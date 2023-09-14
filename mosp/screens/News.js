@@ -30,7 +30,7 @@ export default class News extends Component {
     }
 
     fetchRSSFeed(){
-        fetch('http://word-press.igs-hamm-sieg.de/feed')
+        fetch('https://2022.igs-hamm-sieg.de/feed')
         .then((response) => response.text())
         .then((responseData) => rssParser.parse(responseData))
         .then((rss) => {
@@ -62,7 +62,7 @@ export default class News extends Component {
                 }}
                 renderItem={({item})=>{
                     var date = new Date(Date.parse(item.published));
-                    return <NewsItem date={date.getDate()+"."+date.getMonth()+"."+date.getFullYear()} title={item.title} description={item.description} link={item.id} content={item.content} />
+                    return <NewsItem date={date.getDate()+"."+(date.getMonth()+1)+"."+date.getFullYear()} title={item.title} description={item.description} link={item.id} content={item.content} />
                 } }
                 />
                 </View>

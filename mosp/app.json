@@ -5,8 +5,7 @@
     "privacy": "public",
     "platforms": [
       "ios",
-      "android",
-      "web"
+      "android"
     ],
     "android": {
       "package": "de.domi2803.mosp",
@@ -16,11 +15,10 @@
         "foregroundImage": "./assets/adaptiveIcon.png"
       },
       "googleServicesFile": "./google-services.json",
-      "permissions": [],
-      "versionCode": 10,
+      "versionCode": 11,
       "useNextNotificationsApi": true
     },
-    "version": "1.4",
+    "version": "1.5",
     "notification": {
       "icon": "./assets/notificationIcon96x96.png",
       "color": "#ffffff",
@@ -43,7 +41,7 @@
       "supportsTablet": true,
       "icon": "./assets/iconNoTrans.png",
       "googleServicesFile": "./GoogleService-info.plist",
-      "buildNumber": "1.4"
+      "buildNumber": "1.5"
     },
     "web":{
       "config":{

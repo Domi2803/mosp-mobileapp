@@ -9,5 +9,6 @@ module.exports = {
     apiURL: "https://europe-west1-mosp-dcd1c.cloudfunctions.net/api",
     
     // apiURL: "http://192.168.178.66:7010",
-    analytics:null
+    analytics:null,
+    firebaseApp: null,
 }

@@ -13,7 +13,6 @@ import { Transition } from 'react-native-reanimated';
 import {MaterialIcons, MaterialCommunityIcons} from '@expo/vector-icons';
 import Plan from './screens/Plan';
 import News from './screens/News';
-import Settings from './screens/Settings';
 
 import Expo from 'expo'
 import * as Notifications from 'expo-notifications';
@@ -28,6 +27,9 @@ import * as firebase from 'firebase';
 import AddCourseModal from './components/AddCourseModal';
 import { Host } from 'react-native-portalize';
 import { DefaultTheme } from '@react-navigation/native';    
+import Settings from './screens/Settings';
+import { StatusBar } from 'expo-status-bar';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 
 const bottomTab = require('react-navigation-material-bottom-tabs').createMaterialBottomTabNavigator;
@@ -149,7 +151,7 @@ async function initRegister(){
     console.log()
     updatePushConfig(()=>{})
 }
-
+const AppContainer =  createAppContainer(AuthFlowNavigator);
 
 export default class App extends Component {
 
@@ -177,17 +179,15 @@ export default class App extends Component {
     render() {
         
         return (
-            <View style={{height: '100%', width: '100%'}}>
+            <SafeAreaView style={{ flex: 1,}}>
                 <Host>
-
                     <AppContainer style={{backgroundColor: '#ffffff'}} />
                     <Tutorial />
-                
+                    <StatusBar style="dark" />
                 </Host>
-            </View>
+            </SafeAreaView>
         )
     }
 }
 
 
-const AppContainer =  createAppContainer(AuthFlowNavigator);
